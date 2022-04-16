@@ -37,3 +37,7 @@ p {
     color: black;
     font-family: 'Poppins', sans-serif;
 }
+
+@media screen and (min-width: 800px) {}
+
+@media screen and (min-width: 1200px) {}
