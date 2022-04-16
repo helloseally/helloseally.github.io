@@ -15,3 +15,7 @@ h1{
     position: absolute;
     z-index: 1;
 }
+   
+#logo {
+    background-image: url("seally-logo.svg");
+}
