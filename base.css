@@ -16,28 +16,48 @@
 font-family: 'Poppins', sans-serif; */
    
 #logo {
-    height: 70px;
+    height: 50px;
 }
 
 body {
-    /* margin: 60px 130px; */
+    margin: 40px;
 }
 
 h1{
-    /* position: absolute;
-    width: 770px;
+    padding: 80px 0 20px 0;
     color: #1C2F63;
     font-family: 'Montserrat', sans-serif;
-    font-size: 64px;
+    font-size: 36px;
     font-weight: 800;
-    letter-spacing: 5px; */
+    letter-spacing: 5px;
 }
 
 p {
     color: black;
     font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 35px;
 }
 
-@media screen and (min-width: 800px) {}
+.buttons {
+    font-family: 'Montserrat', sans-serif;
+    color: #1C2F63;
+    background-color: #C2D5F2;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 100px;
+}
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+    h1{
+        width: 770px;
+        font-size: 64px;
+        font-weight: 800;
+        letter-spacing: 5px;
+    }
+}

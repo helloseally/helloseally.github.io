@@ -2,7 +2,7 @@
 //granim: 
 var granimInstance = new Granim({
     element: '#canvas-basic',
-    direction: 'left-right',
+    direction: 'diagonal',
     transitionSpeed: 10000,
     isPausedWhenNotInView: true,
     states : {
