@@ -60,17 +60,17 @@
         if (document.getElementById('affirmation').checked) {
             writeType = "Affirmations"; 
             writeSection.className = "showing";
-            writeSection.style.height = "500px";
+            // writeSection.style.height = "500px";
             whichTypeSection.className = "hidden";
-            whichTypeSection.style.height = "0px";
+            // whichTypeSection.style.height = "0px";
 
         }
         else if (document.getElementById('joke').checked) {
             writeType = 'Jokes';
             writeSection.className = "showing";
-            writeSection.style.height = "500px";
+            // writeSection.style.height = "500px";
             whichTypeSection.className = "hidden";
-            whichTypeSection.style.height = "0px";
+            // whichTypeSection.style.height = "0px";
 
         } 
     })
@@ -78,8 +78,8 @@
     miniback.addEventListener("click",function(){
         writeSection.className = "hidden";
         whichTypeSection.className = "showing";
-        whichTypeSection.style.height = "500px";
-        writeSection.style.height = "0px";
+        // whichTypeSection.style.height = "500px";
+        // writeSection.style.height = "200px";
 
     })
 
