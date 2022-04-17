@@ -89,11 +89,11 @@
         event.preventDefault();
 
         finalWrite.className = "showing";
-        finalWrite.style.height = "500px";
+        // finalWrite.style.height = "500px";
         writeSection.className = "hidden";
         whichTypeSection.className = "hidden";
-        whichTypeSection.style.height = "0px";
-        writeSection.style.height = "0px";
+        // whichTypeSection.style.height = "0px";
+        // writeSection.style.height = "0px";
 
         if (writeType == "Affirmations"){
             addAffirmation();
@@ -107,6 +107,13 @@
         // code for overlays which are hidden and which shows
         
     });
+
+    const writeAnother = document.querySelector("#wano");
+
+        writeAnother.addEventListener("click",function(){
+            writeSection.className = "showing";
+            finalWrite.className = "hidden";
+        });
 
     async function addAffirmation() {
         let newAffirmation = '';
