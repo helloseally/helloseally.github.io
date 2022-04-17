@@ -98,6 +98,8 @@
     const receiveTypeForm = document.getElementById('receive-type-form');
 
 
+    const inboxSection = document.getElementById('inbox');
+    const whichTypeSection = document.getElementById('whichType');
     let receiveType;
 
     receiveTypeForm.addEventListener('submit', function(event){
@@ -105,21 +107,26 @@
 
         if (document.getElementById('affirmation').checked) {
             receiveType = "Affirmations";
+            inboxSection.className = "showing";
+            whichTypeSection.className = "hidden";
+            receiveSomething();
         }
         else if (document.getElementById('joke').checked) {
             receiveType = 'Jokes';
+            inboxSection.className = "showing";
+            whichTypeSection.className = "hidden";
+            receiveSomething();
         }
     })
 
 
-    writeForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+    function receiveSomething() {
 
-        if (writeType == "Affirmations"){
+        if (receiveType == "Affirmations"){
             showAffirmations();
             receiveAffirmation();
         }
-        else if (writeType == "Jokes"){
+        else if (receiveType == "Jokes"){
             showJokes();
             receiveJoke();
 
@@ -129,7 +136,7 @@
 
         // code for overlays which are hidden and which shows
         
-    });
+    }
 
 
 
@@ -173,7 +180,7 @@
                 const jokeText = eachJoke.get('Joke');
 
                 jokesArray.push(jokeText);
-                console.log(jokesArray)
+                console.log(jokesArray);
 
             })
 
