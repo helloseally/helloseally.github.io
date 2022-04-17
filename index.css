@@ -1,16 +1,19 @@
-
 body {
-    margin: 40px;
+    margin: auto;
+    width: 80%;
 }
 
-h1{
+header {
+    margin-top: 50px;
+}
+
+#description h1{
     padding: 80px 0 20px 0;
     color: #1C2F63;
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: 800;
     letter-spacing: 5px;
-    width: 400px;
 }
 
 h3 {
@@ -18,6 +21,7 @@ h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     letter-spacing: 3px;
+    text-align: center;
 }
 
 p {
@@ -28,49 +32,45 @@ p {
     padding-bottom: 30px;
 }
 
-#mainthing{
-    width: 60vw;
-    margin-right: 0;
+#mainthing {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
 }
+
+#description {
+    width: 80%;
+}
+
 #mainMenu {
-    background-color: rgb(255, 255, 255, 0.6);
-    border-radius: 50px;
-    padding-top: 20px;
-    width: 390px;
+    width: 80%;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 25px;
+    padding: 30px;
 }
 
-#description{
-    font-size: 18px;
-    width: 380px;
-    margin: 20px;
-    margin-right: 0;
-}
-
-#mainMenu-content {
-    margin: 45px;
-}
+/* buttons */
 
 #mainMenu-buttons {
-    padding-top: 10px;
-    padding-bottom: 50px;
+    margin: auto;
+    width: 300px;
+    padding-top: 5px;
 }
 
-.buttons {
+/* .buttons {
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 
 .buttons p {
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: #1C2F63;
     background-color: #C2D5F2;
     font-weight: 800;
     text-decoration: none;
-    padding: 20px 30px;
+    padding: 15px 0;
     border-radius: 100px;
     transition: all 0.5s ease-in-out;
 }
@@ -94,55 +94,39 @@ p {
 }
 
 @media screen and (min-width: 800px) {
-    #mainthing{
-        width: 500px;
+    body {
+        max-width: 1400px;
+        width: 90%;
+        overflow: hidden;
+    }
+    header {
+        margin-bottom: 100px;
+    }
+    #mainthing {
+        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        gap: 100px;
     }
-
-    #description{
-        width: 300px;
-        margin-left: 0;
+    #mainMenu {
+        margin-top: 150px;
+        width: 60%;
+        height: fit-content;
     }
-
-    #mainMenu{
-        margin-right: 100px;
-    }
-    
-    h1{
-        flex: 1 100%;
+    #description {
+        width: 40%;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    #mainthing{
-
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    #mainthing {
+        gap: 150px;
     }
-
-    #description{
-        margin-top: 50px;
-        /* margin-top: -200px; */
-        width: 500px;
+    #mainMenu {
+        margin-top: 110px;
+        width: 50%;
+        padding: 25px;
     }
-    #mainMenu{
-        margin-right: 200px;
-    }
-
-    h1{
-        flex: 1 100%;
-        width: 50vw;
-        font-size: 60px;
-        font-weight: 800;
-        letter-spacing: 5px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    h3 {
-        font-size: 25px;
+    #description {
+        width: 50%;
     }
 }
