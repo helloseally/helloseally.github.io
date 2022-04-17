@@ -149,6 +149,24 @@
         const affirmations = Parse.Object.extend('Affirmations');
         const query = new Parse.Query(affirmations);
 
+         // program to get a random item from an array
+
+            function getRandomItem(arr) {
+
+                // get random index value
+                const randomIndex = Math.floor(Math.random() * arr.length);
+
+                // get random item
+                const item = arr[randomIndex];
+
+                return item;
+            }
+
+
+            const result = getRandomItem(affirmationsArray);
+            console.log(result);
+         //end of trying to get random    
+
         try {
             const results = await query.find();
 
@@ -157,7 +175,8 @@
                 const affirmationText = eachAffirmation.get('Affirmation');
 
                 affirmationsArray.push(affirmationText);
-                console.log(affirmationsArray);
+                // console.log(affirmationsArray);
+                
             })
 
 
@@ -171,7 +190,22 @@
     async function showJokes(){
         const jokes = Parse.Object.extend('Jokes');
         const query = new Parse.Query(jokes);
+            // program to get a random item from an array
 
+            function getRandomItem(arr) {
+
+                // get random index value
+                const randomIndex = Math.floor(Math.random() * arr.length);
+
+                // get random item
+                const item = arr[randomIndex];
+
+                return item;
+            }
+
+            const result = getRandomItem(affirmationsArray);
+            console.log(result);
+            //end of trying to get random  
         try {
             const results = await query.find();
 
@@ -180,7 +214,7 @@
                 const jokeText = eachJoke.get('Joke');
 
                 jokesArray.push(jokeText);
-                console.log(jokesArray);
+                // console.log(jokesArray);
 
             })
 
