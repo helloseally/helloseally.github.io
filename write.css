@@ -45,11 +45,13 @@
 }
 
 .hidden{
+    display: none;
     opacity: 0;
     height: 0;
 }
 
 .showing{
+    display: inline;
     opacity: 1;
     width: 400px;
 }
