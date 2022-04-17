@@ -5,10 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- granim -->
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script> 
+    <link rel="stylesheet" href="base.css">     
+
+    <script  src="script.js" defer ></script>
 </head>
 <body>
+    <!-- Background: -->
+    <canvas id="canvas-basic"></canvas>
+
     <header>
         <a id="logo"></a>
     </header>
+
+    <section id="write">
+        <h2>write</h2>
+        <form id="write-form">
+            <textarea id="message" maxlength="280"></textarea>
+            <p id="characters-left"><span id="char-count">280</span>/280 characters</p>
+
+            <input type="submit" value="Send">
+        </form>
+        
+    </section>
+
+    
 </body>
 </html>

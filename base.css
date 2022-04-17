@@ -8,7 +8,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
 }
 
 h1{
@@ -18,4 +18,22 @@ h1{
    
 #logo {
     background-image: url("seally-logo.svg");
+}
+
+#write {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+#write-form {
+    resize: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#message {
+    width: 400px;
+    height: 25px;
 }
