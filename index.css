@@ -3,7 +3,7 @@ body {
     margin: 40px;
 }
 
-#tagline{
+h1{
     padding: 80px 0 20px 0;
     color: #1C2F63;
     font-family: 'Montserrat', sans-serif;
@@ -11,7 +11,6 @@ body {
     font-weight: 800;
     letter-spacing: 5px;
     width: 400px;
-    margin-left: 0;
 }
 
 h3 {
@@ -30,7 +29,8 @@ p {
 }
 
 #mainthing{
-    width: 90vw;
+    width: 60vw;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,6 +46,7 @@ p {
     font-size: 18px;
     width: 380px;
     margin: 20px;
+    margin-right: 0;
 }
 
 #mainMenu-content {
@@ -94,7 +95,7 @@ p {
 
 @media screen and (min-width: 800px) {
     #mainthing{
-        margin-right: 50px;
+        width: 500px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -109,15 +110,14 @@ p {
         margin-right: 100px;
     }
     
-    #tagline{
+    h1{
         flex: 1 100%;
     }
 }
 
 @media screen and (min-width: 1200px) {
     #mainthing{
-        margin-left: 100px;
-        margin-right: 50px;
+
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -125,7 +125,6 @@ p {
 
     #description{
         margin-top: 50px;
-        margin-left: 0;
         /* margin-top: -200px; */
         width: 500px;
     }
@@ -133,8 +132,8 @@ p {
         margin-right: 200px;
     }
 
-    #tagline{
-        /* flex: 1 100%; */
+    h1{
+        flex: 1 100%;
         width: 50vw;
         font-size: 60px;
         font-weight: 800;
