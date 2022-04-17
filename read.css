@@ -1,11 +1,11 @@
-#write {
+#receive {
     width: 400px;
     height: 500px;
     margin: auto;
     background-color: aliceblue;
 }
 
-#write-form {
+#receive-form {
     resize: none;
     overflow-x: auto;
     overflow-y: hidden;
@@ -25,7 +25,7 @@
     background-color: rgb(255, 255, 255, 0.6);
 }
 
-#write-type-form{
+#receive-type-form{
     margin: auto;
     padding: 50px 30px;
     text-align: center;
@@ -44,11 +44,11 @@
 }
 
 .hidden{
-    opacity: 0;
+    display: none;
 }
 
 .showing{
-    opacity: 1;
+    display: block;
 }
 
 /* buttons */
@@ -63,9 +63,11 @@ fieldset {
 fieldset legend {
     font-size: 30px;
     padding: 20px 20px;
+
 }
 
 fieldset label {
+    justify-content: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     padding: 10px 20px;
