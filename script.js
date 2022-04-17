@@ -1,4 +1,11 @@
 (function() {
+    'use strict'
+
+    // parse from back4app
+    Parse.initialize("zMpPa7cLO009wzjqQgNHKmjqNREKkArCQttD0hxL","Jq0Hh5Ca4vSw7QLT6trPZ2ASvZtbO7Sm4X3Uiid7"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = 'https://parseapi.back4app.com/'
+
+
     //granim: 
     var granimInstance = new Granim({
         element: '#canvas-basic',
@@ -40,7 +47,33 @@
         
     });
 
-    // bubbles
+    // ------------ afirmation code ---------------
+
+    async function showAffirmations(){
+        const affirmations = Parse.Object.extend('Affirmations');
+        const query = new Parse.Query(affirmations);
+
+        try {
+            const results = await query.find();
+
+            results.forEach(function(eachAffirmation){
+                const id = eachAffirmation.id;
+                const affirmationText = eachAffirmation.get('affirmation');
+
+                console.log('test');
+                console.log(affirmationText);
+
+            })
+
+        } catch (error){
+            console.error('Error while fetching your affirmation');
+        }
+    }
+
+    showAffirmations();
+
+
+    // ------------bubbles--------------
 
     let bubbles = document.querySelectorAll('.embub');
 
@@ -59,53 +92,53 @@
 
     // https://stackoverflow.com/questions/13784686/moving-an-image-randomly-around-a-page
 
-    $(document).ready(function(){
-        AnimateDiv($('.embub'));
-        AnimateDiv($('.embub1'));
-        AnimateDiv($('.embub2'));
-        AnimateDiv($('.embub3'));
-        AnimateDiv($('.embub4'));
-        AnimateDiv($('.embub5'));
-        AnimateDiv($('.embub6'));
-        AnimateDiv($('.embub7'));
-    });
+    // $(document).ready(function(){
+    //     AnimateDiv($('.embub'));
+    //     AnimateDiv($('.embub1'));
+    //     AnimateDiv($('.embub2'));
+    //     AnimateDiv($('.embub3'));
+    //     AnimateDiv($('.embub4'));
+    //     AnimateDiv($('.embub5'));
+    //     AnimateDiv($('.embub6'));
+    //     AnimateDiv($('.embub7'));
+    // });
 
-    function makeNewPosition($container) {
-        var h = $container.height() + 500;
-        var w = $container.width() + Math.random();
+    // function makeNewPosition($container) {
+    //     var h = $container.height() + 500;
+    //     var w = $container.width() + Math.random();
 
-        var nh = Math.floor(Math.random() * h);
-        var nw = Math.floor(Math.random() * w);
+    //     var nh = Math.floor(Math.random() * h);
+    //     var nw = Math.floor(Math.random() * w);
 
-        return [nh, nw];
-    };
+    //     return [nh, nw];
+    // };
 
-    function AnimateDiv($target){
-        var newq = makeNewPosition($target.parent());
-        var oldq = $target.offset();
-        var speed = calcSpeed([oldq.top, oldq.left], newq);
+    // function AnimateDiv($target){
+    //     var newq = makeNewPosition($target.parent());
+    //     var oldq = $target.offset();
+    //     var speed = calcSpeed([oldq.top, oldq.left], newq);
 
-        $target.animate({
-            top: newq[0],
-            left: newq[1]
-        }, speed, function() {
-            AnimateDiv($target);
-        });
-    };
+    //     $target.animate({
+    //         top: newq[0],
+    //         left: newq[1]
+    //     }, speed, function() {
+    //         AnimateDiv($target);
+    //     });
+    // };
 
-    function calcSpeed(prev, next) {
+    // function calcSpeed(prev, next) {
 
-        var x = Math.abs(prev[1] - next[1]);
-        var y = Math.abs(prev[0] - next[0]);
+    //     var x = Math.abs(prev[1] - next[1]);
+    //     var y = Math.abs(prev[0] - next[0]);
 
-        var greatest = x > y ? x : y;
+    //     var greatest = x > y ? x : y;
 
-        var speedModifier = 0.02;
+    //     var speedModifier = 0.02;
 
-        var speed = Math.ceil(greatest / speedModifier);
+    //     var speed = Math.ceil(greatest / speedModifier);
 
-        return speed;
+    //     return speed;
 
-    }
+    // }
   
 })();
