@@ -1,6 +1,9 @@
 /* granim */
+body{
+    width: 100vw;
+}
 #canvas-basic {
-    position: absolute;
+    position: fixed;
     display: block;
     width: 100%;
     height: 100%;
@@ -8,17 +11,73 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: -100;
 }
 
-h1{
+/* bubbles */
+.embub{
     position: absolute;
-    z-index: 1;
+    z-index: -1;
+    top: 100px;
+    left: 100px;
+/* 
+    animation-name: divs;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
 }
-   
-#logo {
-    background-image: url("seally-logo.svg");
+
+.embub1{
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+    left: 200px;
 }
+.embub2{
+    position: absolute;
+    z-index: -1;
+    top: 200px;
+    left: 500px;
+}
+
+.embub3{
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    left: 400px;
+}
+
+.embub4{
+    position: absolute;
+    z-index: -1;
+    top: 400px;
+    left: 400px;
+}
+.embub5{
+    position: absolute;
+    z-index: -1;
+    top: 150px;
+    left: 25px;
+}
+
+.embub6{
+    position: absolute;
+    z-index: -1;
+    top: 500px;
+    left: 50px;
+}
+
+.embub7{
+        position: absolute;
+        z-index: -1;
+        top: 700px;
+        right: 20px;
+}
+
+/* regular  */
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; */
 
 #write {
     width: 400px;
@@ -36,4 +95,56 @@ h1{
 #message {
     width: 400px;
     height: 25px;
+}
+
+body {
+    margin: 40px;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.buttons {
+    font-family: 'Montserrat', sans-serif;
+    color: #1C2F63;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.buttons p {
+    font-family: 'Montserrat', sans-serif;
+    color: #1C2F63;
+    background-color: #C2D5F2;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 100px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 800px) {
+
+    h1{
+        width: 770px;
+        font-size: 64px;
+        font-weight: 800;
+        letter-spacing: 5px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    h1{
+        width: 770px;
+        font-size: 64px;
+        font-weight: 800;
+        letter-spacing: 5px;
+    }
 }
