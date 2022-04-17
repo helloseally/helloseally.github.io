@@ -23,6 +23,11 @@
         }
     });
 
+//buttons
+
+
+
+
     // ------------------------FORM CODE ----------------------------
 
     var writeForm = document.getElementById("write-form");
@@ -44,23 +49,50 @@
         }
     });
 
-
+    const whichTypeSection = document.getElementById('whichType');
+    const writeSection = document.getElementById('write');
+    const miniback = document.querySelector('.miniback');
     let writeType;
 
     writeTypeForm.addEventListener('submit', function(event){
         event.preventDefault();
 
         if (document.getElementById('affirmation').checked) {
-            writeType = "Affirmations";
+            writeType = "Affirmations"; 
+            writeSection.className = "showing";
+            writeSection.style.height = "500px";
+            whichTypeSection.className = "hidden";
+            whichTypeSection.style.height = "0px";
+
         }
         else if (document.getElementById('joke').checked) {
             writeType = 'Jokes';
-        }
+            writeSection.className = "showing";
+            writeSection.style.height = "500px";
+            whichTypeSection.className = "hidden";
+            whichTypeSection.style.height = "0px";
+
+        } 
     })
 
+    miniback.addEventListener("click",function(){
+        writeSection.className = "hidden";
+        whichTypeSection.className = "showing";
+        whichTypeSection.style.height = "500px";
+        writeSection.style.height = "0px";
 
+    })
+
+    const finalWrite = document.getElementById("finalWrite");
     writeForm.addEventListener('submit', function(event) {
         event.preventDefault();
+
+        finalWrite.className = "showing";
+        finalWrite.style.height = "500px";
+        writeSection.className = "hidden";
+        whichTypeSection.className = "hidden";
+        whichTypeSection.style.height = "0px";
+        writeSection.style.height = "0px";
 
         if (writeType == "Affirmations"){
             addAffirmation();
@@ -199,6 +231,7 @@
 
     showJokes();
 
+    
 
     // ------------bubbles--------------
 

@@ -1,0 +1,126 @@
+#write {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+#write-form {
+    resize: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#message {
+    width: 400px;
+    height: 25px;
+}
+
+#whichType{
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    padding: 0;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255, 0.6);
+}
+
+#write-type-form{
+    margin: auto;
+    padding: 50px 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#whichType h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    background-color: #1C2F63;
+    padding: 30px;
+    margin: auto;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    color: white;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.showing{
+    opacity: 1;
+}
+
+/* buttons */
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin-top: 20px;
+}
+
+fieldset legend {
+    font-size: 30px;
+    padding: 20px 20px;
+}
+
+fieldset label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    color: #1C2F63;
+    margin: 20px 50px 10px 50px;
+}
+
+
+fieldset label:hover {
+    background-color: #C2D5F2;
+    cursor: pointer;
+}
+
+
+fieldset input,
+fieldset label {
+    display: inline;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+}
+
+fieldset input[type="radio"]:checked+label {
+    background-color: black;
+    color: white;
+}
+
+.submit{
+    background-color: #1C2F63;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+}
+
+.submit:hover{
+    cursor: pointer;
+    background-color: #1f1f1f;
+}
+
+.back{
+    width: 60px;
+    position: absolute;
+    left: 30%;
+    top: 18%;
+    filter: drop-shadow(0px 0px 4px #e1e1e1);
+}
+
+.back:hover{
+    filter: drop-shadow(0px 0px 4px #1C2F63);
+
+}
