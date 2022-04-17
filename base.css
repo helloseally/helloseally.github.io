@@ -15,7 +15,8 @@ body{
 }
 
 .logo{
-    height: 65px;
+    height: 70px;
+    margin-left: 10%;
 }
 /* bubbles */
 .embub{

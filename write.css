@@ -22,6 +22,7 @@ header{
 }
 
 #write-form textarea {
+    width: 400px;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     line-height: 30px;
@@ -188,9 +189,18 @@ fieldset input[type="radio"]:checked+label {
     background-color: rgb(255, 255, 255, 0.6);
 }
 
+#instructions {
+    margin: auto;
+    width: 400px;
+    margin-top: 40px;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
 #write-form{
     margin: auto;
-    padding: 50px 30px;
+    margin-top: 0;
+    padding: 30px 30px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
@@ -257,6 +267,10 @@ fieldset input[type="radio"]:checked+label {
     bottom: 20px;
     width: 500px;
     justify-content: space-around;
+}
+
+#finalWrite a {
+    text-decoration: none;
 }
 
 #finalWrite a p{

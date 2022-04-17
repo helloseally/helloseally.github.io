@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>seally - write</title>
+
+    <link rel="shortcut icon" href="media/approval.png">
 
     <!-- granim -->
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script> 
@@ -66,10 +68,11 @@
 
     <section id="write" class="hidden">
         <h2>write</h2>
+        <p id="instructions"></p>
         <a href="#"><img src="media/backBtn.png" class="miniback"></a>
 
         <form id="write-form">
-            <textarea id="message" maxlength="200" name="text"></textarea>
+            <textarea id="message" maxlength="200" name="text" width="400px"></textarea>
             <p id="characters-left"><span id="char-count">200</span>/200 characters</p>
 
             <input type="submit" value="Send" class="submit">

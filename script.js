@@ -34,6 +34,7 @@
     var message = document.getElementById("message");
     const writeTypeForm = document.getElementById('write-type-form');
     const currTextDiv = document.getElementById('submittedText');
+    const instructions = document.getElementById('instructions');
 
     const inputs = document.getElementById('message');
 
@@ -64,6 +65,7 @@
             // writeSection.style.height = "500px";
             whichTypeSection.className = "hidden";
             // whichTypeSection.style.height = "0px";
+            instructions.innerHTML = 'Write an affirmation to yourself! (Example: You are amazing!)';
 
         }
         else if (document.getElementById('joke').checked) {
@@ -72,6 +74,8 @@
             // writeSection.style.height = "500px";
             whichTypeSection.className = "hidden";
             // whichTypeSection.style.height = "0px";
+            instructions.innerHTML = 'Share a funny joke! ';
+
 
         } 
     })
@@ -98,9 +102,13 @@
 
         if (writeType == "Affirmations"){
             addAffirmation();
+            
         }
         else if (writeType == "Jokes"){
             addJoke();
+            
+
+
         } else {
             alert("error while retrieving form, make sure that all of the areas are filled out!");
         }
@@ -193,11 +201,6 @@
         } else {
             alert("error while retrieving form, make sure that all of the areas are filled out!");
         }
-    }
-
-    // --------------show curr submission ---------------------
-    function showCurrSubmission(){
-        currTextDiv.innerHTML = `<p>${currText}</p>`;
     }
 
 

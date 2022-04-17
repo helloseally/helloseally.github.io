@@ -122,16 +122,22 @@
         }
     })
 
+    const receiveAnotherBtn = document.getElementById('receiveAnotherBtn');
+
+    receiveAnotherBtn.addEventListener('click', function(){
+        receiveSomething();
+    })
+
 
     function receiveSomething() {
 
         if (receiveType == "Affirmations"){
             showAffirmations();
-            receiveAffirmation();
+            
         }
         else if (receiveType == "Jokes"){
             showJokes();
-            receiveJoke();
+            
 
         } else {
             alert("error while retrieving form, make sure that all of the areas are filled out!");
@@ -168,6 +174,7 @@
 
             const result = getRandomItem(affirmationsArray);
             console.log(result);
+            document.getElementById('receivedText').innerHTML = `<p>${result}</p>`;
          //end of trying to get random    
 
         try {
@@ -206,8 +213,9 @@
                 return item;
             }
 
-            const result = getRandomItem(affirmationsArray);
+            const result = getRandomItem(jokesArray);
             console.log(result);
+            document.getElementById('receivedText').innerHTML = `<p>${result}</p>`;
             //end of trying to get random  
         try {
             const results = await query.find();
@@ -227,10 +235,6 @@
     }
 
     showJokes();
-
-    function receiveAffirmation(){
-        let ranNum = Math.floor(Math.random() * 10)
-    }
 
 
   
