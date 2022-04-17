@@ -78,6 +78,20 @@ body{
         right: 20px;
 }
 
+.embub8{
+    position: absolute;
+    z-index: -1;
+    top: 60%;
+    right: 80%;
+}
+.embub9{
+    position: absolute;
+    z-index: -1;
+    top: 20%;
+    right: 10%;
+}
+
+
 /* regular  */
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif; */

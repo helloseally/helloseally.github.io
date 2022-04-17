@@ -51,6 +51,9 @@
       AnimateDiv($('.embub5'));
       AnimateDiv($('.embub6'));
       AnimateDiv($('.embub7'));
+      AnimateDiv($('.embub8'));
+      AnimateDiv($('.embub9'));
+
   });
 
   function makeNewPosition($container) {
