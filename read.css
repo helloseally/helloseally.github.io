@@ -45,12 +45,10 @@
 
 .hidden{
     opacity: 0;
-    height: 0;
 }
 
 .showing{
     opacity: 1;
-    width: 400px;
 }
 
 /* buttons */
@@ -125,74 +123,4 @@ fieldset input[type="radio"]:checked+label {
 .back:hover{
     filter: drop-shadow(0px 0px 4px #1C2F63);
 
-}
-
-.miniback{
-    width: 60px;
-    position: absolute;
-    left: 30%;
-    top: 18%;
-    filter: drop-shadow(0px 0px 4px #e1e1e1);
-}
-
-.miniback:hover{
-    filter: drop-shadow(0px 0px 4px #1C2F63);
-
-}
-
-#write .showing{
-    position: absolute;
-    margin: auto;
-    z-index: 1;
-}
-#message{
-    width: 300px;
-    color: #1f1f1f;
-}
-
-#write{
-    width: 400px;
-    height: 500px;
-    padding: 0;
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255, 0.6);
-}
-
-#write-form{
-    margin: auto;
-    padding: 50px 30px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#write h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    background-color: #1C2F63;
-    padding: 30px;
-    margin: auto;
-    border-radius: 20px 20px 0 0;
-    text-align: center;
-    color: white;
-}
-
-#finalWrite{
-    position: absolute;
-    margin: auto;
-    width: 400px;
-    height: 500px;
-    padding: 0;
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255, 0.6);
-}
-
-#finalWrite h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    background-color: #1C2F63;
-    padding: 30px;
-    margin: auto;
-    border-radius: 20px 20px 0 0;
-    text-align: center;
-    color: white;
 }

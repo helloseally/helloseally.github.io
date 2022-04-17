@@ -8,25 +8,43 @@
 
     <!-- granim -->
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script> 
-    <link rel="stylesheet" href="base.css">     
-
+    
     <!-- parse (back4app) -->
     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
 
+    
     <link rel="stylesheet" href="base.css">     
     <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="write.css"> 
+
 
     <script  src="script.js" defer ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <!-- Background: -->
     <canvas id="canvas-basic"></canvas>
 
+     <!-- bubbles -->
+     <div id="container">
+        <div class="embub"><img src="media/bubble.png" width="100px"></div>
+        <div class="embub1"><img src="media/bubble.png" height="20px"></div>
+        <div class="embub2"><img src="media/bubble.png" height="50px"></div>
+        <div class="embub3"><img src="media/bubble.png" height="30px"></div>
+        <div class="embub4"><img src="media/bubble.png" height="80px"></div>
+        <div class="embub5"><img src="media/bubble.png" height="20px"></div>
+        <div class="embub6"><img src="media/bubble.png" height="30px"></div>
+        <div class="embub7"><img src="media/bubble.png" height="40px"></div>
+    </div>
+
+
+    <!-- logo -->
     <header>
-        <a id="logo"></a>
+        <a href="index.html"><img class="logo" src="media/logo.png"></a>
     </header>
 
     <section id="whichType" class="showing">
+        <a href="index.html"><img src="media/backBtn.png" class="back"></a>
         <h2>write</h2>
         <form id="write-type-form">
             <legend>What would you like to write?</legend>
@@ -39,20 +57,31 @@
                 <label class="typeClass" for="joke">joke</label>
             </fieldset>
 
-            <center><input type="submit" value="choose"></center>
+            <center><input type="submit" value="choose" class="submit" id="submit"></center>
 
         </form>
     </section>
 
     <section id="write" class="hidden">
         <h2>write</h2>
+        <a href="#"><img src="media/backBtn.png" class="miniback"></a>
+
         <form id="write-form">
             <textarea id="message" maxlength="280" name="text"></textarea>
             <p id="characters-left"><span id="char-count">280</span>/280 characters</p>
 
-            <input type="submit" value="Send">
+            <input type="submit" value="Send" class="submit">
         </form>
         
+    </section>
+
+    <section id="finalWrite" class="hidden">
+        <h2>write</h2>
+        <div></div>
+        <p id="thanks">thanks for submitting :)</p>
+        <a href="#"><p>write another</p></a>
+        <a href="#"><p>recieve one</p></a>
+
     </section>
 
     

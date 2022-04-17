@@ -23,6 +23,11 @@
         }
     });
 
+//buttons
+
+
+
+
     // ------------------------FORM CODE ----------------------------
 
     var writeForm = document.getElementById("write-form");
@@ -44,23 +49,50 @@
         }
     });
 
-
+    const whichTypeSection = document.getElementById('whichType');
+    const writeSection = document.getElementById('write');
+    const miniback = document.querySelector('.miniback');
     let writeType;
 
     writeTypeForm.addEventListener('submit', function(event){
         event.preventDefault();
 
         if (document.getElementById('affirmation').checked) {
-            writeType = "Affirmations";
+            writeType = "Affirmations"; 
+            writeSection.className = "showing";
+            writeSection.style.height = "500px";
+            whichTypeSection.className = "hidden";
+            whichTypeSection.style.height = "0px";
+
         }
         else if (document.getElementById('joke').checked) {
             writeType = 'Jokes';
-        }
+            writeSection.className = "showing";
+            writeSection.style.height = "500px";
+            whichTypeSection.className = "hidden";
+            whichTypeSection.style.height = "0px";
+
+        } 
     })
 
+    miniback.addEventListener("click",function(){
+        writeSection.className = "hidden";
+        whichTypeSection.className = "showing";
+        whichTypeSection.style.height = "500px";
+        writeSection.style.height = "0px";
 
+    })
+
+    const finalWrite = document.getElementById("finalWrite");
     writeForm.addEventListener('submit', function(event) {
         event.preventDefault();
+
+        finalWrite.className = "showing";
+        finalWrite.style.height = "500px";
+        writeSection.className = "hidden";
+        whichTypeSection.className = "hidden";
+        whichTypeSection.style.height = "0px";
+        writeSection.style.height = "0px";
 
         if (writeType == "Affirmations"){
             addAffirmation();
@@ -199,6 +231,7 @@
 
     showJokes();
 
+    
 
     // ------------bubbles--------------
 
@@ -219,53 +252,53 @@
 
     // https://stackoverflow.com/questions/13784686/moving-an-image-randomly-around-a-page
 
-    // $(document).ready(function(){
-    //     AnimateDiv($('.embub'));
-    //     AnimateDiv($('.embub1'));
-    //     AnimateDiv($('.embub2'));
-    //     AnimateDiv($('.embub3'));
-    //     AnimateDiv($('.embub4'));
-    //     AnimateDiv($('.embub5'));
-    //     AnimateDiv($('.embub6'));
-    //     AnimateDiv($('.embub7'));
-    // });
+    $(document).ready(function(){
+        AnimateDiv($('.embub'));
+        AnimateDiv($('.embub1'));
+        AnimateDiv($('.embub2'));
+        AnimateDiv($('.embub3'));
+        AnimateDiv($('.embub4'));
+        AnimateDiv($('.embub5'));
+        AnimateDiv($('.embub6'));
+        AnimateDiv($('.embub7'));
+    });
 
-    // function makeNewPosition($container) {
-    //     var h = $container.height() + 500;
-    //     var w = $container.width() + Math.random();
+    function makeNewPosition($container) {
+        var h = $container.height() + 500;
+        var w = $container.width() + Math.random();
 
-    //     var nh = Math.floor(Math.random() * h);
-    //     var nw = Math.floor(Math.random() * w);
+        var nh = Math.floor(Math.random() * h);
+        var nw = Math.floor(Math.random() * w);
 
-    //     return [nh, nw];
-    // };
+        return [nh, nw];
+    };
 
-    // function AnimateDiv($target){
-    //     var newq = makeNewPosition($target.parent());
-    //     var oldq = $target.offset();
-    //     var speed = calcSpeed([oldq.top, oldq.left], newq);
+    function AnimateDiv($target){
+        var newq = makeNewPosition($target.parent());
+        var oldq = $target.offset();
+        var speed = calcSpeed([oldq.top, oldq.left], newq);
 
-    //     $target.animate({
-    //         top: newq[0],
-    //         left: newq[1]
-    //     }, speed, function() {
-    //         AnimateDiv($target);
-    //     });
-    // };
+        $target.animate({
+            top: newq[0],
+            left: newq[1]
+        }, speed, function() {
+            AnimateDiv($target);
+        });
+    };
 
-    // function calcSpeed(prev, next) {
+    function calcSpeed(prev, next) {
 
-    //     var x = Math.abs(prev[1] - next[1]);
-    //     var y = Math.abs(prev[0] - next[0]);
+        var x = Math.abs(prev[1] - next[1]);
+        var y = Math.abs(prev[0] - next[0]);
 
-    //     var greatest = x > y ? x : y;
+        var greatest = x > y ? x : y;
 
-    //     var speedModifier = 0.02;
+        var speedModifier = 0.02;
 
-    //     var speed = Math.ceil(greatest / speedModifier);
+        var speed = Math.ceil(greatest / speedModifier);
 
-    //     return speed;
+        return speed;
 
-    // }
+    }
   
 })();
