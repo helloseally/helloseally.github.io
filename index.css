@@ -129,4 +129,8 @@ p {
     #description {
         width: 50%;
     }
+
+    h1 {
+        font-size: 64px;
+    }
 }
