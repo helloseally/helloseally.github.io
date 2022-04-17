@@ -1,0 +1,17 @@
+#write {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+#write-form {
+    resize: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#message {
+    width: 400px;
+    height: 25px;
+}
