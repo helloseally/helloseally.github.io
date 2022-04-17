@@ -116,20 +116,12 @@ p {
 }
 
 @media screen and (min-width: 800px) {
-
     h1{
-        width: 770px;
         font-size: 64px;
         font-weight: 800;
-        letter-spacing: 5px;
+        letter-spacing: 15px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    h1{
-        width: 770px;
-        font-size: 64px;
-        font-weight: 800;
-        letter-spacing: 5px;
-    }
 }
