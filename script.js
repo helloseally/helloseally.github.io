@@ -23,6 +23,8 @@
         }
     });
 
+    // ------------------------FORM CODE ----------------------------
+
     var writeForm = document.getElementById("write-form");
     var message = document.getElementById("message");
     const writeTypeForm = document.getElementById('write-type-form');
@@ -66,7 +68,7 @@
         else if (writeType == "Jokes"){
             addJoke();
         } else {
-            console.error("error choosing between joke and affirmation")
+            alert("error while retrieving form, make sure that all of the areas are filled out!");
         }
 
         // code for overlays which are hidden and which shows
@@ -74,7 +76,12 @@
     });
 
     async function addAffirmation() {
-        const newAffirmation = {};
+        let newAffirmation = '';
+
+        newAffirmation = document.getElementById('message').value;
+
+        console.log(newAffirmation);
+
 
         for (let i=0; i<inputs.length; i++) {
             let key = inputs[i].getAttribute('name');
@@ -82,9 +89,10 @@
             newAffirmation[key] = value;
         }
 
-        if (newAffirmation.text != '' ) {
+
+        if (newAffirmation != '' ) {
             const newAffirmationData = new Parse.Object('Affirmations');
-            newAffirmationData.set('Affirmation', newAffirmation.text);
+            newAffirmationData.set('Affirmation', newAffirmation);
 
             try {
                 const result = await newAffirmationData.save();
@@ -94,8 +102,50 @@
             } catch(error) {
                 console.error('Error while creating affirmation');
             }
+
+            showAffirmations();
+
+        } else {
+            alert("error while retrieving form, make sure that all of the areas are filled out!");
         }
     }
+
+
+    async function addJoke() {
+        let newJoke = '';
+
+        newJoke = document.getElementById('message').value;
+
+        console.log(newJoke);
+
+
+        for (let i=0; i<inputs.length; i++) {
+            let key = inputs[i].getAttribute('name');
+            let value = inputs[i].value;
+            newJoke[key] = value;
+        }
+
+
+        if (newJoke != '' ) {
+            const newJokeData = new Parse.Object('Jokes');
+            newJokeData.set('Joke', newJoke);
+
+            try {
+                const result = await newJokeData.save();
+
+                document.getElementById('write-form').reset();
+                document.getElementById('write-type-form').reset(); 
+            } 
+            catch(error) {
+                console.error('Error while creating joke');
+            }
+
+            showJokes();
+        } else {
+            alert("error while retrieving form, make sure that all of the areas are filled out!");
+        }
+    }
+
 
 
     // ------------ afirmation and joke array code ---------------
@@ -115,8 +165,9 @@
                 const affirmationText = eachAffirmation.get('Affirmation');
 
                 affirmationsArray.push(affirmationText);
-
+                console.log(affirmationsArray);
             })
+
 
         } catch (error){
             console.error('Error while fetching your affirmation');
@@ -137,6 +188,7 @@
                 const jokeText = eachJoke.get('Joke');
 
                 jokesArray.push(jokeText);
+                console.log(jokesArray)
 
             })
 
