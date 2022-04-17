@@ -20,8 +20,9 @@ h3 {
     color: #1C2F63;
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
-    letter-spacing: 3px;
+    letter-spacing: 1.5px;
     text-align: center;
+    padding-top: 40px;
 }
 
 p {
@@ -55,6 +56,7 @@ p {
     margin: auto;
     width: 300px;
     padding-top: 5px;
+    margin-top: 60px;
 }
 
 /* .buttons {
@@ -63,7 +65,7 @@ p {
 } */
 
 
-.buttons p {
+.buttons a p {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: #1C2F63;
@@ -81,7 +83,7 @@ p {
 }
 
 #mainMenu-write p:hover{
-    background-color: #1C2F63;
+    background-color: #2d436f;
 }
 
 #mainMenu-receive p{
@@ -90,7 +92,7 @@ p {
 }
 
 #mainMenu-receive p:hover{
-    background-color: #1C2F63;
+    background-color: #2f4776;
 }
 
 @media screen and (min-width: 800px) {
@@ -99,9 +101,7 @@ p {
         width: 90%;
         overflow: hidden;
     }
-    header {
-        margin-bottom: 100px;
-    }
+    
     #mainthing {
         display: flex;
         flex-direction: row;
