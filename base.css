@@ -1,4 +1,7 @@
 /* granim */
+body{
+    width: 100vw;
+}
 #canvas-basic {
     position: fixed;
     display: block;
@@ -9,6 +12,67 @@
     bottom: 0;
     left: 0;
     z-index: -100;
+}
+
+/* bubbles */
+.embub{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 100px;
+/* 
+    animation-name: divs;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+.embub1{
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+    left: 200px;
+}
+.embub2{
+    position: absolute;
+    z-index: -1;
+    top: 200px;
+    left: 500px;
+}
+
+.embub3{
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    left: 400px;
+}
+
+.embub4{
+    position: absolute;
+    z-index: -1;
+    top: 400px;
+    left: 400px;
+}
+.embub5{
+    position: absolute;
+    z-index: -1;
+    top: 150px;
+    left: 25px;
+}
+
+.embub6{
+    position: absolute;
+    z-index: -1;
+    top: 500px;
+    left: 50px;
+}
+
+.embub7{
+        position: absolute;
+        z-index: -1;
+        top: 700px;
+        right: 20px;
 }
 
 /* regular  */
