@@ -17,6 +17,7 @@
     <!-- granim -->
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script> 
     <link rel="stylesheet" href="base.css">     
+    <link rel="stylesheet" href="index.css"> 
 
     <script  src="script.js" defer ></script>
 </head>
@@ -39,9 +40,13 @@
     <!-- menu -->
 
     <section id="mainMenu">
-        <h3>write or recieve an affirmation or joke!</h3>
-        <a class="buttons" href="write.html">write one</a>
-        <a class="buttons" href="read.html">receive one</a>
+        <section id="mainMenu-content">
+            <h3>write or recieve an affirmation or joke!</h3>
+            <section id="mainMenu-buttons">
+                <a id="mainMenu-write" class="buttons" href="write.html"><p>write one</p></a>
+                <a id="mainMenu-receive" class="buttons" href="read.html"><p>receive one</p></a>
+            </section>
+        </section>
     </section>
 
 </body>
