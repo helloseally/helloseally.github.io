@@ -84,6 +84,7 @@
     })
 
     const finalWrite = document.getElementById("finalWrite");
+    
     writeForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
