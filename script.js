@@ -33,6 +33,7 @@
     var writeForm = document.getElementById("write-form");
     var message = document.getElementById("message");
     const writeTypeForm = document.getElementById('write-type-form');
+    const currTextDiv = document.getElementById('submittedText');
 
     const inputs = document.getElementById('message');
 
@@ -40,7 +41,7 @@
         event.preventDefault();
 
         var curLen = message.value.length;
-        var charsLeft = 280 - curLen;
+        var charsLeft = 200 - curLen;
         var count = document.getElementById("char-count");
         count.innerHTML = charsLeft;
 
@@ -114,6 +115,8 @@
             writeSection.className = "showing";
             finalWrite.className = "hidden";
         });
+    
+    let currText;
 
     async function addAffirmation() {
         let newAffirmation = '';
@@ -133,6 +136,9 @@
         if (newAffirmation != '' ) {
             const newAffirmationData = new Parse.Object('Affirmations');
             newAffirmationData.set('Affirmation', newAffirmation);
+
+            currText = newAffirmation;
+            currTextDiv.innerHTML = `<p>${currText}</p>`;
 
             try {
                 const result = await newAffirmationData.save();
@@ -170,6 +176,9 @@
             const newJokeData = new Parse.Object('Jokes');
             newJokeData.set('Joke', newJoke);
 
+            currText = newJoke;
+            currTextDiv.innerHTML = `<p>${currText}</p>`;
+
             try {
                 const result = await newJokeData.save();
 
@@ -186,6 +195,10 @@
         }
     }
 
+    // --------------show curr submission ---------------------
+    function showCurrSubmission(){
+        currTextDiv.innerHTML = `<p>${currText}</p>`;
+    }
 
 
     // ------------ afirmation and joke array code ---------------

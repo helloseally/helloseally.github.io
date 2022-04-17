@@ -14,7 +14,6 @@
 
     
     <link rel="stylesheet" href="base.css">     
-    <link rel="stylesheet" href="index.css"> 
     <link rel="stylesheet" href="write.css"> 
 
 
@@ -46,8 +45,9 @@
     <section id="whichType" class="showing">
         <a href="index.html"><img src="media/backBtn.png" class="back"></a>
         <h2>write</h2>
+        <p id="writeQuestion">What would you like to write?</p>
         <form id="write-type-form">
-            <legend>What would you like to write?</legend>
+
 
             <fieldset>
                 <input class="typeResponses" type="radio" name="type" id="affirmation" value="affirmation">
@@ -67,8 +67,8 @@
         <a href="#"><img src="media/backBtn.png" class="miniback"></a>
 
         <form id="write-form">
-            <textarea id="message" maxlength="280" name="text"></textarea>
-            <p id="characters-left"><span id="char-count">280</span>/280 characters</p>
+            <textarea id="message" maxlength="200" name="text"></textarea>
+            <p id="characters-left"><span id="char-count">200</span>/200 characters</p>
 
             <input type="submit" value="Send" class="submit">
         </form>
@@ -80,8 +80,8 @@
         <div id="submittedText"></div>
         <p id="thanks">thanks for submitting :)</p>
         <section id="bot">
-        <a href="#" id="wano"><p>write another</p></a>
-        <a href="read.html"><p>recieve one</p></a>
+            <a href="#" id="wano"><p>write another</p></a>
+            <a href="read.html"><p>recieve one</p></a>
         </section>
     </section>
 

@@ -1,3 +1,8 @@
+
+h2 {
+    font-size: 40px;
+}
+
 #write {
     width: 400px;
     height: 500px;
@@ -16,6 +21,15 @@ header{
     overflow-y: hidden;
 }
 
+#write-form textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+
 #message {
     width: 400px;
     height: 25px;
@@ -24,7 +38,7 @@ header{
 #whichType{
     margin: auto;
     width: 500px;
-    height: 700px;
+    height: 600px;
     padding: 0;
     border-radius: 30px;
     background-color: rgb(255, 255, 255, 0.6);
@@ -32,15 +46,17 @@ header{
 
 #write-type-form{
     margin: auto;
-    padding: 50px 30px;
+    padding: 0px 30px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
+
 #whichType h2{
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    background-color: #1C2F63;
+    font-size: 40px;
+    letter-spacing: 3px;
+    background-color: #5A709B;
     padding: 30px;
     margin: auto;
     border-radius: 20px 20px 0 0;
@@ -56,6 +72,13 @@ header{
     display: block;
 }
 
+#writeQuestion {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
 /* buttons */
 
 fieldset {
@@ -66,19 +89,21 @@ fieldset {
 }
 
 fieldset legend {
-    font-size: 30px;
     padding: 20px 20px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 24px;
 }
 
 fieldset label {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 25px 40px;
     background-color: white;
-    font-size: 18px;
-    border-radius: 20px;
+    font-size: 28px;
+    border-radius: 100px;
     color: #1C2F63;
-    margin: 20px 50px 10px 50px;
+    margin: 30px 50px 10px 50px;
 }
 
 
@@ -100,16 +125,18 @@ input[type="radio"] {
 }
 
 fieldset input[type="radio"]:checked+label {
-    background-color: black;
+    background-color: #34436f;
     color: white;
 }
 
 .submit{
+    font-size: 24px;
+    margin-top: 30px;
     background-color: #1C2F63;
     border: none;
-    padding: 10px;
+    padding: 20px 45px;
     color: white;
-    border-radius: 20px;
+    border-radius: 100px;
 }
 
 .submit:hover{
@@ -155,7 +182,7 @@ fieldset input[type="radio"]:checked+label {
 
 #write{
     width: 500px;
-    height: 700px;
+    height: 600px;
     padding: 0;
     border-radius: 30px;
     background-color: rgb(255, 255, 255, 0.6);
@@ -170,8 +197,9 @@ fieldset input[type="radio"]:checked+label {
 
 #write h2{
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    background-color: #1C2F63;
+    font-size: 40px;
+    letter-spacing: 3px;
+    background-color: #5A709B;
     padding: 30px;
     margin: auto;
     border-radius: 20px 20px 0 0;
@@ -184,7 +212,7 @@ fieldset input[type="radio"]:checked+label {
     position: relative;
     margin: auto;
     width: 500px;
-    height: 700px;
+    height: 600px;
     padding: 0;
     border-radius: 30px;
     background-color: rgb(255, 255, 255, 0.6);
@@ -193,16 +221,19 @@ fieldset input[type="radio"]:checked+label {
 #submittedText{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    width: 300px;
-    padding: 10px;
+    width: 280px;
+    padding: 0px 20px;
     margin: 10px;
     float: right ;
+    line-height: 30px;
+    font-size: 20px;
 }
 
 #thanks{
+    font-size: 20px;
     background-color: white;
     border-radius: 10px;
-    width: 200px;
+    width: 220px;
     padding: 10px;
     margin: 10px;
     float: left;
@@ -210,8 +241,9 @@ fieldset input[type="radio"]:checked+label {
 
 #finalWrite h2{
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    background-color: #1C2F63;
+    font-size: 40px;
+    letter-spacing: 3px;
+    background-color: #5A709B;
     padding: 30px;
     margin: auto;
     border-radius: 20px 20px 0 0;
@@ -220,19 +252,29 @@ fieldset input[type="radio"]:checked+label {
 }
 #bot{
     position: absolute;
+    display: flex;
     margin: auto;
-    bottom: 150px;
-    left: 30%;
+    bottom: 20px;
+    width: 500px;
+    justify-content: space-around;
 }
 
 #finalWrite a p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
     margin: auto;
     margin-bottom: 20px;
-    padding: 10px;
-    width: 200px;
-    background-color: #1C2F63;
-    border-radius: 20px;
+    padding: 20px 40px;
+    background-color: #6E82A9;
+    border-radius: 100px;
     text-align: center;
+    color: white;
+}
+
+#finalWrite a p:hover {
+    background-color: #2f4166;
     color: white;
 }
 
