@@ -23,10 +23,28 @@
         <a id="logo"></a>
     </header>
 
-    <section id="write">
+    <section id="whichType" class="showing">
+        <h2>write</h2>
+        <form id="write-type-form">
+            <legend>What would you like to write?</legend>
+
+            <fieldset>
+                <input class="typeResponses" type="radio" name="type" id="affirmation" value="affirmation">
+                <label class="typeClass" for="affirmation">affirmation</label>
+
+                <input class="typeResponses" type="radio" name="type" id="joke" value="joke">
+                <label class="typeClass" for="joke">joke</label>
+            </fieldset>
+
+            <center><input type="submit" value="choose"></center>
+
+        </form>
+    </section>
+
+    <section id="write" class="hidden">
         <h2>write</h2>
         <form id="write-form">
-            <textarea id="message" maxlength="280"></textarea>
+            <textarea id="message" maxlength="280" name="text"></textarea>
             <p id="characters-left"><span id="char-count">280</span>/280 characters</p>
 
             <input type="submit" value="Send">

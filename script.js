@@ -25,6 +25,9 @@
 
     var writeForm = document.getElementById("write-form");
     var message = document.getElementById("message");
+    const writeTypeForm = document.getElementById('write-type-form');
+
+    const inputs = document.getElementById('message');
 
     message.addEventListener("keyup", function(event) {
         event.preventDefault();
@@ -39,16 +42,67 @@
         }
     });
 
+
+    let writeType;
+
+    writeTypeForm.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        if (document.getElementById('affirmation').checked) {
+            writeType = "Affirmations";
+        }
+        else if (document.getElementById('joke').checked) {
+            writeType = 'Jokes';
+        }
+    })
+
+
     writeForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // go somewhere or do something?
+        if (writeType == "Affirmations"){
+            addAffirmation();
+        }
+        else if (writeType == "Jokes"){
+            addJoke();
+        } else {
+            console.error("error choosing between joke and affirmation")
+        }
 
+        // code for overlays which are hidden and which shows
         
     });
 
-    // ------------ afirmation code ---------------
+    async function addAffirmation() {
+        const newAffirmation = {};
 
+        for (let i=0; i<inputs.length; i++) {
+            let key = inputs[i].getAttribute('name');
+            let value = inputs[i].value;
+            newAffirmation[key] = value;
+        }
+
+        if (newAffirmation.text != '' ) {
+            const newAffirmationData = new Parse.Object('Affirmations');
+            newAffirmationData.set('Affirmation', newAffirmation.text);
+
+            try {
+                const result = await newAffirmationData.save();
+
+                document.getElementById('write-form').reset();
+                document.getElementById('write-type-form').reset(); 
+            } catch(error) {
+                console.error('Error while creating affirmation');
+            }
+        }
+    }
+
+
+    // ------------ afirmation and joke array code ---------------
+
+    let affirmationsArray = [];
+    let jokesArray = [];
+    
     async function showAffirmations(){
         const affirmations = Parse.Object.extend('Affirmations');
         const query = new Parse.Query(affirmations);
@@ -60,7 +114,7 @@
                 const id = eachAffirmation.id;
                 const affirmationText = eachAffirmation.get('Affirmation');
 
-                console.log(affirmationText);
+                affirmationsArray.push(affirmationText);
 
             })
 
@@ -70,6 +124,28 @@
     }
 
     showAffirmations();
+
+    async function showJokes(){
+        const jokes = Parse.Object.extend('Jokes');
+        const query = new Parse.Query(jokes);
+
+        try {
+            const results = await query.find();
+
+            results.forEach(function(eachJoke){
+                const id = eachJoke.id;
+                const jokeText = eachJoke.get('Joke');
+
+                jokesArray.push(jokeText);
+
+            })
+
+        } catch (error){
+            console.error('Error while fetching your joke');
+        }
+    }
+
+    showJokes();
 
 
     // ------------bubbles--------------
