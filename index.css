@@ -3,13 +3,15 @@ body {
     margin: 40px;
 }
 
-h1{
+#tagline{
     padding: 80px 0 20px 0;
     color: #1C2F63;
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: 800;
     letter-spacing: 5px;
+    width: 400px;
+    margin-left: 0;
 }
 
 h3 {
@@ -26,10 +28,24 @@ p {
     line-height: 35px;
     padding-bottom: 30px;
 }
+
+#mainthing{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #mainMenu {
     background-color: rgb(255, 255, 255, 0.6);
     border-radius: 50px;
     padding-top: 20px;
+    width: 390px;
+}
+
+#description{
+    font-size: 18px;
+    width: 380px;
+    margin: 20px;
 }
 
 #mainMenu-content {
@@ -46,6 +62,7 @@ p {
     margin-right: auto;
 }
 
+
 .buttons p {
     font-family: 'Montserrat', sans-serif;
     color: #1C2F63;
@@ -54,6 +71,7 @@ p {
     text-decoration: none;
     padding: 20px 30px;
     border-radius: 100px;
+    transition: all 0.5s ease-in-out;
 }
 
 #mainMenu-write p{
@@ -61,24 +79,71 @@ p {
     color: white;
 }
 
+#mainMenu-write p:hover{
+    background-color: #1C2F63;
+}
+
 #mainMenu-receive p{
     background-color: #8EA5D2;
     color: white;
 }
 
-@media screen and (min-width: 800px) {
+#mainMenu-receive p:hover{
+    background-color: #1C2F63;
+}
 
+@media screen and (min-width: 800px) {
+    #mainthing{
+        margin-right: 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #description{
+        width: 300px;
+        margin-left: 0;
+    }
+
+    #mainMenu{
+        margin-right: 100px;
+    }
+    
+    #tagline{
+        flex: 1 100%;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    h1{
-        width: 770px;
-        font-size: 64px;
+    #mainthing{
+        margin-left: 100px;
+        margin-right: 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #description{
+        margin-top: 50px;
+        margin-left: 0;
+        /* margin-top: -200px; */
+        width: 500px;
+    }
+    #mainMenu{
+        margin-right: 200px;
+    }
+
+    #tagline{
+        /* flex: 1 100%; */
+        width: 50vw;
+        font-size: 60px;
         font-weight: 800;
         letter-spacing: 5px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     h3 {
-        font-size: 32px;
+        font-size: 25px;
     }
 }
