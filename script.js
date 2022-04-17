@@ -58,9 +58,8 @@
 
             results.forEach(function(eachAffirmation){
                 const id = eachAffirmation.id;
-                const affirmationText = eachAffirmation.get('affirmation');
+                const affirmationText = eachAffirmation.get('Affirmation');
 
-                console.log('test');
                 console.log(affirmationText);
 
             })
