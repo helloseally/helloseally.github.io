@@ -1,6 +1,6 @@
 body {
     margin: auto;
-    width: 80%;
+    width: 70%;
 }
 
 header {
@@ -53,6 +53,7 @@ p {
     background-color: rgb(255, 255, 255, 0.5);
     border-radius: 25px;
     padding: 30px;
+    margin-bottom: 50px;
 }
 
 /* buttons */
@@ -104,9 +105,9 @@ p {
 
 @media screen and (min-width: 800px) {
     body {
-        max-width: 1400px;
-        width: 90%;
-        overflow: hidden;
+        /* max-width: 1400px; */
+        width: 80%;
+        height: fit-content;
     }
     
     #mainthing {
@@ -117,7 +118,7 @@ p {
     #mainMenu {
         margin-top: 150px;
         width: 50%;
-
+        margin-bottom: 0;
     }
     #description {
         width: 40%;
