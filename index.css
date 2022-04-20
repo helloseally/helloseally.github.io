@@ -13,9 +13,10 @@ header {
 
 #description h1{
     padding: 60px 0 20px 0;
+    margin: auto;
     color: #1C2F63;
     font-family: 'Montserrat', sans-serif;
-    font-size: 68px;
+    font-size: 50px;
     font-weight: 800;
     letter-spacing: 5px;
 }
@@ -49,7 +50,7 @@ p {
 }
 
 #mainMenu {
-    width: 80%;
+    width: 400px;
     background-color: rgb(255, 255, 255, 0.5);
     border-radius: 25px;
     padding: 30px;
@@ -108,6 +109,10 @@ p {
         width: 90%;
         overflow: hidden;
     }
+
+    #description h1{
+        font-size: 68px;
+    }
     
     #mainthing {
         display: flex;
@@ -130,7 +135,7 @@ p {
     }
     #mainMenu {
         margin-top: 110px;
-        width: 40%;
+        width: 400px;
         
         padding: 25px;
     }
@@ -139,6 +144,6 @@ p {
     }
 
     h1 {
-        font-size: 64px;
+        font-size: 68px;
     }
 }
